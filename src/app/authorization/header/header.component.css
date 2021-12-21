@@ -1,0 +1,49 @@
+.accountBtn{
+    border:solid rgba(0, 0, 0, 0) 0px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Fira Sans;
+    font-size: 1.2em;
+    color: #999DA0;
+    display: flex;
+    align-items: center;
+}
+
+.userIcon{
+    margin-left: 10px;
+    height: 50px;
+    filter: invert(77%) sepia(6%) saturate(210%) hue-rotate(163deg) brightness(81%) contrast(84%);
+}
+
+.username{
+    margin-left: 10px;
+    font-family: Fira Sans;
+    font-size: 1.2em;
+    color: #999DA0;
+}
+
+.logOut{
+    float: right;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logOutBtn{
+    border:solid rgba(0, 0, 0, 0) 0px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Fira Sans;
+    width: 90px;
+    font-size: 1.2em;
+    color: #999DA0;
+}
+
+.signUpBtn{
+    float:right;
+    color: #0288D1;
+    font-family:Fira Sans;
+    padding: 10px;
+    font-size: 1.2em;
+    border: solid red 0px;
+    background-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,18 @@
+<div class="upperSpace">
+    <div class="usernameSpace">
+        <img src="assets/image/userIcon.png" alt="userIcon" class="userIcon">
+        <p class="username">{{authService.username}}</p>
+    </div>
+    <button class="exitBtn" (click)="onBackClick()"><</button>
+</div>
+<hr style="margin: 10px 5% 10px 5%;">
+<p class="historyWord">History</p>
+<div class="historySpace">
+    <div  *ngFor="let item of history">
+        <div class="historyTickets">
+            <div [ngClass]="item.type == 'start bar' ? 'startBar' : 'noStartBar'">
+                <p>{{item._id}} {{item.type}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="startBarSpace">
+    <div *ngFor="let item of trip">
+        <div class="container" (click)="onStartBarRute(item.to)">
+            <a  class="gradient" >
+                <img src="{{item.img}}" alt="img" class="img" >
+            </a>
+            <div class="to">{{item.to}}</div>
+            <hr class="line">
+            <div class="price">{{item.price}}$</div>
+        </div>
+    </div>
+</div>

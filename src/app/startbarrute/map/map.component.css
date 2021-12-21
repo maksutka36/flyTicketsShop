@@ -1,0 +1,66 @@
+agm-map{
+    height: 300px;
+    width: 300px;    
+}
+
+
+.map{
+    position: absolute;
+    top: 14%;
+    left: 35%;
+    border-right-color: #424242;
+    border-right-style: solid;
+    border-right-width: 4px;
+    border-bottom-color: #424242;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-left-color: #424242;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-radius: 5px;
+}
+
+.closeBtn{
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 100px;
+    color: rgb(158, 157, 157);
+    margin-left: 280px;
+    height: 15px;
+    width: 15px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeBtnStyle{
+    background-color: #424242;
+    width: 300px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+
+.mapBtn{
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(240, 240, 240);
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 70%;
+    left: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 124, 209);
+}
+
+
+.mapIcon{
+    height: 25px;
+    filter: invert(97%) sepia(4%) saturate(46%) hue-rotate(225deg) brightness(114%) contrast(100%);
+    color: #ffffff;
+}

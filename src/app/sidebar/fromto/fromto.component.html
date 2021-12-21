@@ -1,0 +1,43 @@
+<div class="from">
+    <img src="../assets/image/airplane.png" alt="airplane" class='airPlane1'>
+    <button (click)="onSwap()" class="swapBtn">
+      <img src="../assets/image/swap.png" alt="swap" class="swapImg">
+    </button>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Travel from</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="Travel from"
+             matInput
+             [formControl]="fromControl"
+             [matAutocomplete]="autoFromoptions">
+      <mat-autocomplete autoActiveFirstOption #autoFromoptions="matAutocomplete">
+        <mat-option *ngFor="let option of fromFilteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+<div class="to">
+  <form class="example-form">
+    <img src="../assets/image/airplane.png" alt="airplane" class='airPlane2'>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Travel to</mat-label>
+      <input type="text"
+            placeholder="Pick one"
+            aria-label="Travel to"
+            matInput
+            [formControl]="toControl"
+            [matAutocomplete]="autoTooptions">
+      <mat-autocomplete autoActiveSecondOption #autoTooptions="matAutocomplete">
+        <mat-option *ngFor="let option of toFilteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+
+

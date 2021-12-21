@@ -1,0 +1,65 @@
+[
+    {
+        "to": "London",
+        "typeTrip": "One way",
+        "price": 230,
+        "date": "06-11-2021",
+        "timeFrom": "17:55",
+        "timeTo": "17:55",
+        "company": "WizzAir",
+        "imgCompany":"https://upload.wikimedia.org/wikipedia/commons/a/a0/Wizz_Air_logo.svg",
+        "img":"https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYyNDg1MjE3MTI1Mjc5Mzk4/topic-london-gettyimages-760251843-promo.jpg",
+        "wideImg":"https://www.flightcentre.com.au/sites/v0.flightcentre.com.au/files/styles/fcl_blog_slideshow/public/london-thames-river.jpg?itok=QXhqh0IL"
+
+    },
+    {
+        "to": "Prague",
+        "typeTrip": "One way",
+        "price": 260,
+        "date": "2021-11-06",
+        "timeFrom": "17:55",
+        "timeTo": "17:55",
+        "company": "KLM  Airlines",
+        "imgCompany":"https://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg",
+        "img":"https://www.tripsavvy.com/thmb/-ObEjiBhDs0JOc4hiUpat8s8ZTo=/2576x2576/smart/filters:no_upscale()/tourists-at-the-old-town-square--prague-595084979-597ba2430d327a00116313f2.jpg",
+        "wideImg":"https://kasadoo.com/assets/site/images/Austria/Vienna/istorija-velika-naslovna.jpg"
+
+    },
+    {
+        "to": "Vienna",
+        "typeTrip": "One way",
+        "price": 125,
+        "date": "2019-11-05",
+        "timeFrom": "12:55",
+        "timeTo": "14:55",
+        "company": "KLM  Airlines",
+        "imgCompany":"https://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg",
+        "img":"https://aws-tiqets-cdn.imgix.net/images/content/fa3c828a774e4992bd0e96209cc3cf9f.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=a2840f38c5b42afbe6374d3a508cafa5",
+        "wideImg":"https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYyNDg1MjE3MTI1MjEzODYy/topic-london-gettyimages-760251843-feature.webp"
+    },
+    {
+        "to": "Kiev",
+        "typeTrip": "One way",
+        "price": 125,
+        "date": "2019-11-05",
+        "timeFrom": "12:55",
+        "timeTo": "14:55",
+        "company": "KLM  Airlines",
+        "imgCompany":"https://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg",
+        "img":"https://149359143.v2.pressablecdn.com/wp-content/uploads/2020/06/Canva-Panoramic-view-of-the-city-of-Kiev.-Aerial-view-of-St.-Michaels-Golden-Domed-Monastery-and-Sophia-Cathedral-in-the-sunset-1024x1024.jpg",
+        "wideImg":"https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYyNDg1MjE3MTI1MjEzODYy/topic-london-gettyimages-760251843-feature.webp"
+    },
+    {
+        "to": "Berlin",
+        "typeTrip": "One way",
+        "price": 125,
+        "date": "2019-11-05",
+        "timeFrom": "12:55",
+        "timeTo": "14:55",
+        "company": "KLM  Airlines",
+        "imgCompany":"https://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg",
+        "img":"https://cdn.hikb.at/photos/osm/org/31658777648_d7b8a1f933_b.jpg",
+        "wideImg":"https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYyNDg1MjE3MTI1MjEzODYy/topic-london-gettyimages-760251843-feature.webp"
+    }
+
+]

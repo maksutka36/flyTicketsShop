@@ -1,0 +1,22 @@
+<button class="mapBtn" (click)="onMapClick()">
+    <img src="assets/image/mapicon.png" alt="mapIcon" class="mapIcon">
+</button>
+
+
+<div class="open-close-container" >
+    <div class="map"  [@isOpen]="isOpen">
+        <div class="closeBtnStyle">
+            <button class="closeBtn" (click)="onMapClick()">X</button>
+        </div>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="4"> 
+            <div *ngFor="let marker of markers">
+                <agm-marker
+                [latitude]="marker.lat"
+                [longitude]="marker.lng"
+                [title]="marker.title" >
+                    <agm-info-window>{{marker.title}}</agm-info-window> 
+                </agm-marker>
+            </div>
+        </agm-map>
+    </div>
+</div>

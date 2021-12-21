@@ -1,0 +1,31 @@
+[
+    {
+        "nameTrip":"London",
+        "lat":50.412165180406234,
+        "lng":30.443228024582517,
+        "title":"Kiev airport"
+
+    },
+    {
+        "nameTrip":"London",
+        "lat":50.10185291504602,
+        "lng":14.263170368747012,
+        "title":"Prague airport"
+
+    },
+    {
+        "nameTrip":"Prague",
+        "lat":51.88626972009468,
+        "lng":0.23891974183764994,
+        "title":"London airport"
+
+    },
+    {
+        "nameTrip":"Prague",
+        "lat":52.36514930082875,
+        "lng":13.511807357201013,
+        "title":"Berlin airport"
+
+    }
+
+]

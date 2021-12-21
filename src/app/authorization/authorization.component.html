@@ -1,0 +1,51 @@
+
+<form [formGroup]="myForm" novalidate>
+    <app-header (onToggle)="onToggle()"></app-header>
+    <div class="body" [@isOpen]="isOpen"> 
+        <button class="background" type="toggle" (click)="onToggle()"></button>
+        <div class="authorization" [ngClass]="{authorizationLogin: registerBtn === false }">
+            <div class="regLogBtn">
+                <button class="registerBtn"
+                [ngClass]="{regActive: registerBtn === true }"
+                type="button"
+                (click)="onRegister(true)">Register</button>
+                <div class='line'></div>
+                <button class="loginBtn"
+                [ngClass]="{logActive: registerBtn === false }"
+                type="button"
+                (click)="onRegister(false)">Log in</button>
+            </div>
+            <div class="registerItems" >
+                <div *ngIf="registerBtn; else logInBlock">
+
+                    <input 
+                    formControlName="email"
+                    class="registerItem" 
+                    placeholder="Email"
+                    [ngClass]="{'invalid': myForm.controls.email.invalid && myForm.controls.email.touched}">
+
+                    <input 
+                    type="text" 
+                    formControlName="username" 
+                    class="registerItem" 
+                    placeholder="Username"
+                    [ngClass]="{'invalid': myForm.controls.username.invalid && myForm.controls.username.touched}">
+
+                    <input 
+                    type="text" 
+                    formControlName="password" 
+                    class="registerItem" 
+                    placeholder="Password"
+                    [ngClass]="{'invalid': myForm.controls.password.invalid && myForm.controls.password.touched}">
+                    
+                    <button [disabled]="myForm.invalid" class="submitBtn" (click)="onSubmit()" >Submit</button>
+                </div>
+                <ng-template #logInBlock>
+                    <input type="text" formControlName="logEmail" class="registerItem" placeholder="Email">
+                    <input type="text" formControlName="logPassword" class="registerItem" placeholder="Password">
+                    <button class="submitBtn" (click)="onSubmit()" >Submit</button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</form>

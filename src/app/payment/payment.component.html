@@ -1,0 +1,19 @@
+<div class="stripeForm">
+    <form 
+    class="stripeAlert"
+    novalidate
+    (ngSubmit)="createToken()"
+    [formGroup]="stripeForm">
+        <div class="btnForm">
+            <p class="text" style="margin-top: 0px;">Payment Gatewey</p>
+            <p class="text" style="font-size: 1.2em;"> Take for *money*</p>
+            <input type="text" formControlName="email" class="email" placeholder="Email">
+            <ngx-stripe-card
+            [options]="cardOptions"
+            [elementsOptions]="elementsOptions"
+            ></ngx-stripe-card>
+            <button [disabled]="stripeForm.invalid" class="buyBtn">BUY</button>
+            <span *ngIf="stripeForm.controls.email.invalid && stripeForm.controls.email.touched">Incorrect email</span>
+        </div>
+    </form>
+</div>

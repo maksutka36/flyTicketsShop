@@ -1,0 +1,68 @@
+.example-form {
+    margin-left: auto;
+    min-width: 150px;
+    max-width: 500px;
+    width: 80%;
+
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+
+
+  .airPlane1{
+    margin-top: 8px;
+    height: 45px;
+    opacity: 50%;
+    margin-right: 0;
+}
+ 
+ .airPlane2{
+  float: left;
+  margin-left: -62px;
+  margin-right: 0;
+  margin-top: 8px;
+  height: 45px;
+  opacity: 50%;
+  transform: rotate(315deg) scaleX(-1);
+ }
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  margin-top: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px 4px 0 0;
+  padding: 5px 5px 0 5px !important;
+  height: 45px;
+}
+
+.from{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.swapImg{
+  height: 30px;
+  transform: rotate(90deg);
+  
+}
+.swapBtn{
+  border: 0;
+  background-color: rgba(0, 0, 255, 0);
+  filter: invert(35%) sepia(90%) saturate(2665%) hue-rotate(180deg) brightness(95%) contrast(98%);
+  position:absolute; top:28%; left:85%;
+  z-index: 1;
+}
+
+
+.to{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

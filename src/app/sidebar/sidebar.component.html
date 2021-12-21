@@ -1,0 +1,29 @@
+<div id="sidebar">
+    <div class="title">
+        <img src='../assets/image/airlogo.png' alt='image'class="airLogo">
+        <h1>Cheap Flights</h1>
+    </div>
+    <hr style="margin-top: 0; margin-bottom: 0;">
+    <div class="btnTrip">
+        <div class="btnTypeTrip">
+            <mat-button-toggle-group name="fontStyle"
+            aria-label="Font Style">
+                <mat-button-toggle (click)="typeTrip('Round trip')">Round trip</mat-button-toggle>
+                <mat-button-toggle (click)="typeTrip('One way')">One way</mat-button-toggle>
+                <mat-button-toggle (click)="typeTrip('Multy-City')">Multy-City</mat-button-toggle>
+              </mat-button-toggle-group>
+        </div>
+        <h2>Destination</h2>
+        <app-fromto></app-fromto>
+        <h2>Dates</h2>
+        <input type="date" [(ngModel)]="date" class="date">
+        <div class="priceValue">
+            <h2>Price</h2>
+            <h3 class="value" ><{{value}}$</h3>
+        </div>
+        <mat-slider aria-label="unit(s)" [(ngModel)]="value" min = 10 max = 1000
+        color="primary"></mat-slider>
+        <button (click)="onSearch()" class="search">Search</button>
+    </div>
+</div>
+

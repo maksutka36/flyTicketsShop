@@ -1,0 +1,55 @@
+<div *ngFor="let item of startBarResult">
+    <div class="gradient">
+        <img src="{{item.wideImg}}" alt="wideImg" class="wideImg">
+    </div>
+    <div class="info">
+        <div class="company">
+            <img src="{{item.imgCompany}}" alt="imgCompany" class="imgLogo">
+            <p class="companyName">{{item.company}}</p>
+        </div>
+        <div class="infoFont" >  
+          <form class="example-form"  [ngClass]="{error: buyState === false }">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Travel from</mat-label>
+              <input type="text"
+                    placeholder="Pick one"
+                    aria-label="Travel from"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="dateTime">
+            <p style="margin-bottom: 0;">Date:{{item.date}}</p>
+            <p style="margin-top: 0;">Time:{{item.timeTo}}</p>
+        </div>
+        <p class="infoFont">Travel to:{{item.to}}</p>
+        <div class="infoFont">
+          <button class="priceBtn" (click)="onBuyClick()">
+            <p class="priceBtnText">
+                Book now
+            </p>{{ item.price}}$
+          </button>
+        </div>
+    </div>
+</div>
+<app-map></app-map>
+<router-outlet></router-outlet>
+
+<div *ngIf="btnTouched">
+  <div *ngIf="buyState; else messageBox">
+  </div>
+</div>
+
+<ng-template #messageBox>
+  <div class="messageBox">
+    <span class="closeBtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Warning! Fill in the field correctly.
+  </div>
+</ng-template>

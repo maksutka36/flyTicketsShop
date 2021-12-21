@@ -1,0 +1,69 @@
+.upperSpace{
+    margin: 5% 5% 0px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.usernameSpace{
+    height: 90px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.userIcon{
+    height: 80px;
+    filter: invert(77%) sepia(6%) saturate(210%) hue-rotate(163deg) brightness(81%) contrast(84%);
+}
+
+.username{
+    margin-left: 10px;
+    font-family: Fira Sans;
+    font-size: 3em;
+    color: #999DA0;
+}
+
+.historySpace{
+    background-color: rgba(0, 0, 0, 0.08);
+    margin-left: 5%;
+    width: 90%;
+    height: 90vh;
+}
+
+.historyWord{  
+    margin: 0px 0px 10px 5%;
+    font-family: Fira Sans;
+    font-size: 2em;
+    color: #999DA0;
+}
+
+.exitBtn{
+    margin-left: 80%;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: #c9cfd3;
+    color: #999DA0;
+    border-radius: 100px;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 1.2em;
+    font-family: Fira Sans;
+    transition: 0.4s;
+}
+
+.exitBtn:hover{
+    background-color: #e6ebee;
+    color:#c0c5c9;
+}
+
+.historyTickets{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    border: solid black 1px;
+}
+
+.noStartBar{
+    background-color: blueviolet;
+}

@@ -1,0 +1,36 @@
+<div class="cover">
+    <div *ngIf="tripsService.start;else startBar">
+        <div *ngIf="result.length != 0 ; else nothingBlock">
+            <div *ngFor="let item of result">
+                <div class="tickets">
+                    <div class="company">
+                        <img src={{item.imgCompany}} alt="logo" class="imgLogo">
+                        <h3 class="companyName">{{ item.company }}</h3>
+                    </div>
+                    <div class="from">
+                        <h2 class="timeFrom">{{ item.timeFrom}}</h2>
+                        <h3 style="text-align: right">{{ item.from }}</h3>
+                    </div>
+                <h3 class="typeTrip">{{ item.typeTrip }}</h3>
+                <div class="to">
+                    <h2>{{ item.timeTo}}</h2>
+                    <h3>{{ item.to }}</h3>
+                </div>
+                <button class="btnTrip" (click)="onBuyClick(item.price)">
+                    <p class="btnTripAdd">
+                        Book now
+                    </p>{{ item.price}}$</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <ng-template #nothingBlock>
+            <div class="nothingBlock">
+                <p class="nothingSmile">¯\_(ツ)_/¯</p>
+                <p >we didnt  find any like this</p>
+            </div>
+        </ng-template> 
+        <ng-template #startBar>
+            <app-startbar></app-startbar>
+        </ng-template>
+</div>

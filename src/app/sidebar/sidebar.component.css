@@ -1,0 +1,167 @@
+#sidebar{
+    position: fixed;
+    float: left;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.199);
+    width: 25%;
+
+}
+
+.title{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    width: 6.2em;
+    font-family: Fira Sans;
+    font-size: 30px;
+    color: rgb(68, 68, 68);
+    margin-left: 3%;    
+    margin-top: 15px;   
+}
+
+h2{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+    font-size: 1.3em;
+    color: rgb(68, 68, 68);
+    
+}
+
+h3{
+    color: rgb(112, 112, 112);
+    font-family: IBM Plex Sans;
+    margin-top: 0;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.priceValue{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.value{
+margin-top: 20px;
+margin-left: 70%;
+}
+
+.airLogo{
+    max-height: 45px;
+    margin-top: 7.5px;
+}
+
+.btnTrip{
+    margin-top: 10px;
+    height: 100%;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnTypeTrip{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.date{
+    margin-top: 10px;
+    width: 300px;
+}
+
+ input.date.ng-untouched.ng-pristine.ng-valid{
+    background-color: white;
+    border: solid white 1px;
+    border-bottom: solid gray 1px;
+    padding: 0px 0px 8px 8px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+    color: gray ;
+    
+}
+
+ input.date.ng-touched.ng-pristine.ng-valid .ng-dirty{
+    background-color: white;
+    border: solid white 1px;
+    border-bottom: solid gray 1px;
+    padding: 0px 0px 8px 8px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+}
+
+input.date.ng-pristine.ng-valid.ng-touched{
+    background-color: white;
+    border: solid white 1px;
+    border-bottom: solid gray 1px;
+    padding: 0px 0px 8px 8px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+}
+
+input.date.ng-valid.ng-touched.ng-dirty{
+    background-color: white;
+    border: solid white 1px;
+    border-bottom: solid gray 1px;
+    padding: 0px 0px 8px 8px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+}
+
+input.date.ng-untouched.ng-valid.ng-dirty{
+    padding: 0px 0px 8px 8px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 0;
+}
+
+
+
+mat-button-toggle {
+    font-family: 'Raleway';
+    background-color: #F7F7F7;
+    color:#C3C3C3;
+    border-color: #E9E9E9;
+    border-style: solid;
+}
+
+.mat-button-toggle-checked {
+    font-family: 'Fira Sans';
+    background-color: #F7F7F7;
+    color:#0288D1;
+    border-color: #E9E9E9;
+    border-style: solid;
+}
+
+mat-slider{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+}
+
+.search{
+    width: 130px;
+    height: 55px;
+    border: solid #0288D1;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Fira Sans;
+    color: #0288D1;
+    font-size: 1.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px
+}
+
+
+  
+
+
+

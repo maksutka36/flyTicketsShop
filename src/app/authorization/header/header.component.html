@@ -1,0 +1,13 @@
+<div *ngIf="!userAuthenticated; else logOutTemplate">
+    <button (click)="toggle()" class="signUpBtn">Sign up</button>  
+  </div>
+  <ng-template #logOutTemplate>
+      <div class="logOut">
+          <button class="logOutBtn" (click)="logOut()"><p style="width: 100px;">Log out</p></button>
+          <button class="accountBtn"
+          (click)="onAccountClick()">Account
+              <p class="username">{{authService.username}}</p>
+              <img src="assets/image/userIcon.png" alt="userIcon" class="userIcon">
+          </button>
+      </div>
+  </ng-template>
