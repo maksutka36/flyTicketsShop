@@ -47,5 +47,12 @@
                 </ng-template>
             </div>
         </div>
+        <div *ngIf="this.authService.errorMessage != null; then errorBlock"></div>
+        <ng-template #errorBlock>
+            <div class="errorMessage">
+                <p class="errorText">{{this.authService.errorMessage}}</p>
+                <button class="errorExitBtn" (click)="clearErrorMessage()">x</button>
+            </div>
+        </ng-template>
     </div>
 </form>

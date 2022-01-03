@@ -66,14 +66,17 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component'
     MatNativeDateModule,
     DatePickerModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyBhjTSrKhaSwpigKm71mR8ITTen72b5vf8'
+      apiKey:'key'
     }),
-    NgxStripeModule.forRoot('pk_test_51K07pEHQh1NfXvkTW69ZFV9AnJB1xK9TEufLXxEangyHH5tCZZnASfh9mQRoxknxVDonZPb31gD4HA2xQEn5LSD000Ymj1MhZN')
+    NgxStripeModule.forRoot('key')
 
 
 
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}, TripsService],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
+    TripsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

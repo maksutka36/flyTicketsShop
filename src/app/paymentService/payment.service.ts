@@ -4,6 +4,8 @@ import { Subject } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { AuthServiceService } from '../authService/auth-service.service';
 import { PostTrip } from '../payment/payment-model';
+import { host } from '../hostModel/hostModel'
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +24,7 @@ export class PaymentService {
     const username = this.authService.username
     console.log(username, this.type, this.trip)
     const postTrip: PostTrip = { username: username, type: this.type, trip: this.trip}
-    this.http.post('http://localhost:5000/auth/history', postTrip)
+    this.http.post(`${host}/auth/history`, postTrip)
       .subscribe((response) =>{
         console.log(response)
       } )

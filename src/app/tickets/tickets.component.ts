@@ -20,7 +20,7 @@ export class TicketsComponent implements OnInit, DoCheck{
     private http: HttpClient,
     public tripsService: TripsService,
     private ruteService: StartBarRuteService,
-    private paymentSercie: PaymentService,
+    private paymentService: PaymentService,
     private router: Router) { 
   }
 
@@ -49,8 +49,8 @@ export class TicketsComponent implements OnInit, DoCheck{
   onBuyClick(price: number){
     this.ruteService.money = price;
     this.ruteService.payment = true;
-    this.paymentSercie.trip = this.trip
-    this.paymentSercie.type = "tickets"
+    this.paymentService.trip = this.trip
+    this.paymentService.type = "tickets"
     this.router.navigate(['/payment'])
   }
 

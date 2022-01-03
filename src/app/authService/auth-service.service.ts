@@ -2,11 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthData, LoginData } from '../authorization/auth-data-model';
 import { Observable, Subject } from 'rxjs';
+import { Username } from '../account/username.model';
+import { host } from '../hostModel/hostModel'
+import { createViewChild } from '@angular/compiler/src/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
+  history: any;
+  errorMessage = null as any;
   username?: string;
   isAuth = false
   private token?: string;
@@ -25,15 +30,20 @@ export class AuthServiceService {
   createUser(email: string, username: string, password: string){
     const authData: AuthData = {email: email, username: username, password: password}
     console.log(authData)
-    this.http.post('http://localhost:5000/auth/registration', authData)
+    this.http.post(`${host}/auth/registration`, authData)
       .subscribe((response) =>{
         console.log(response)
+        this.login(authData.email, authData.password)
+      },
+      (error) => {
+        console.log("error", error.error.message)
+        this.errorMessage = error.error.message;
       })
   }
 
   login(email:string, password: string){
     const loginDate: LoginData = {email: email, password: password}
-    this.http.post<{token: string, expiresIn:number, username: string}>("http://localhost:5000/auth/login", loginDate)
+    this.http.post<{token: string, expiresIn:number, username: string}>(`${host}/auth/login`, loginDate)
     .subscribe((response) =>{
       const token = response.token;
       this.token = token;
@@ -48,21 +58,25 @@ export class AuthServiceService {
         const expirationDate = new Date(now.getTime() + expiresInDuration * 1000);
         this.saveAuthData(token, expirationDate, username)
       }
+    },
+    (error) => {
+      console.log("error", error.error.message)
+      this.errorMessage = error.error.message;
     })
   }
 
   autoAuthUser(){
     const authInfo = this.getAuthData();
     const now = new Date();
-    const expiresIn = authInfo!.expirationDate.getTime() - now.getTime();
-    if(expiresIn > 0){
-      if(localStorage.getItem("token")){
+    if(localStorage.getItem("token")){
+      const expiresIn = authInfo!.expirationDate.getTime() - now.getTime();
+      if(expiresIn > 0){
         this.isAuth = true;
+        this.token = authInfo?.token;
+        this.username = authInfo?.username!
+        this.authStatusListener.next(true);
+        this.setAuthTimer(expiresIn / 1000)
       }
-      this.token = authInfo?.token;
-      this.username = authInfo?.username!
-      this.authStatusListener.next(true);
-      this.setAuthTimer(expiresIn / 1000)
     }
   }
 
@@ -71,7 +85,15 @@ export class AuthServiceService {
     this.isAuth = false;
     this.authStatusListener.next(false);
     this.clearAuthData()
+  }
 
+  getHistory(){
+    const username: Username = {username: this.username!}
+    this.http.post(`${host}/auth/getHistory`, username)
+    .subscribe((res) =>{
+      this.history = res
+      console.log(this.history)
+    })
   }
 
   private setAuthTimer(duration: number){

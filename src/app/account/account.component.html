@@ -8,7 +8,7 @@
 <hr style="margin: 10px 5% 10px 5%;">
 <p class="historyWord">History</p>
 <div class="historySpace">
-    <div  *ngFor="let item of history">
+    <div  *ngFor="let item of authService.history">
         <div class="historyTickets">
             <div [ngClass]="item.type == 'start bar' ? 'startBar' : 'noStartBar'">
                 <p>{{item._id}} {{item.type}}</p>

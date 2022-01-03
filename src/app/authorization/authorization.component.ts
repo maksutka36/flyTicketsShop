@@ -88,8 +88,6 @@ export class AuthorizationComponent implements OnInit, OnDestroy, DoCheck {
     }
   }
   
-
-  
   onToggle(){
     this.isOpen = !this.isOpen
   }
@@ -98,7 +96,9 @@ export class AuthorizationComponent implements OnInit, OnDestroy, DoCheck {
     this.registerBtn = change
   }
 
-
+  clearErrorMessage(){
+    this.authService.errorMessage = null as any;
+  }
 
 
 }
