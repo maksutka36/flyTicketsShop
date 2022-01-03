@@ -64,13 +64,9 @@ export class PaymentComponent implements OnInit {
           this.paymentService.postHistory()
           this.router.navigate(['/success'])
         } else if (result.error) {
-          console.log(result.error.message);
+          this.router.navigate(['/error'])
         }
       });
   }
-
-
-
-
 
 }

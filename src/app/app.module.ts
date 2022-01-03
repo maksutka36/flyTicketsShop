@@ -29,7 +29,9 @@ import { AuthorizationComponent } from './authorization/authorization.component'
 import { AuthInterceptorService } from './authorization/auth-interceptor.service';
 import { AccountComponent } from './account/account.component';
 import { NgxStripeModule } from 'ngx-stripe';
-import { SuccessAlertComponent } from './success-alert/success-alert.component'
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { ErrorAlertComponent } from './error-alert/error-alert.component'
+import { StartBarRuteService } from './startBarRuteService/startbarrute.service';
 
 
 
@@ -49,6 +51,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component'
     AuthorizationComponent,
     AccountComponent,
     SuccessAlertComponent,
+    ErrorAlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,8 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component'
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
-    TripsService
+    TripsService,
+    StartBarRuteService
   ],
   bootstrap: [AppComponent]
 })

@@ -37,7 +37,11 @@ export class AuthServiceService {
       },
       (error) => {
         console.log("error", error.error.message)
-        this.errorMessage = error.error.message;
+        if(error.error.message == undefined){
+          this.errorMessage = "Server dosen't work"
+        }else{
+          this.errorMessage = error.error.message;
+        }
       })
   }
 
@@ -62,6 +66,11 @@ export class AuthServiceService {
     (error) => {
       console.log("error", error.error.message)
       this.errorMessage = error.error.message;
+      if(error.error.message == undefined){
+        this.errorMessage = "Server dosen't work"
+      }else{
+        this.errorMessage = error.error.message;
+      }
     })
   }
 

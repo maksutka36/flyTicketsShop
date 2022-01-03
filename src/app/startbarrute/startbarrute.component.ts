@@ -38,10 +38,9 @@ export class StartBarRuteComponent implements OnInit {
     this.http.get('/assets/startBar.json').subscribe((data:any) => this.startBarItem = data as TripStartbar[] );
     this.http.get('/assets/startBarAirport.json').subscribe((data:any) => this.startBarAirport = data as Airports[] );
     this.name = this.route.snapshot.params['name'];
-    this.startBarResult = this.startBarItem.filter( item => item.to == this.name);
-    this.nameAirport = this.startBarAirport.filter( item => item.nameTrip == this.name);
-    this.filter(this.nameAirport)
-    this.startBarRute.startBarTrip = this.startBarResult    
+    this.getData()
+    this.getStart()
+    
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value)),
@@ -54,6 +53,20 @@ export class StartBarRuteComponent implements OnInit {
     return this.array.filter(option => option.toLowerCase().includes(filterValue));
   }
 
+  getStart(){
+    this.startBarRute.getStartBarInfo()
+    setTimeout(() =>{
+      this.getData()
+    },500)
+
+  }
+
+  getData(){
+    this.startBarResult = this.startBarRute.startBarTrip.filter( item => item.to == this.name);
+    this.nameAirport = this.startBarAirport.filter( item => item.nameTrip == this.name);
+    this.filter(this.nameAirport)
+    this.startBarRute.startBarTrip = this.startBarResult
+  }
 
   filter(item: Airports[]){
     for(let i = 0; i < item.length; i++){

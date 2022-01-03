@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TripStartbar } from '../tripsModels/trips';
 
@@ -5,13 +6,16 @@ import { TripStartbar } from '../tripsModels/trips';
   providedIn: 'root'
 })
 export class StartBarRuteService {
-  startBarTrip?:TripStartbar[];
+  startBarTrip:TripStartbar[] = [];
   userLng = 30;
   userLat = 30;
   money = 10;
   payment = false;
 
+  constructor( private http: HttpClient) { }
 
-  constructor() { }
+  getStartBarInfo(){
+    this.http.get('/assets/startBar.json').subscribe((data:any) => this.startBarTrip = data as TripStartbar [])
+  }
 }
 

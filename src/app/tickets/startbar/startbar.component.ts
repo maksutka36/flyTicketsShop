@@ -11,16 +11,14 @@ import { StartBarRuteService } from 'src/app/startBarRuteService/startbarrute.se
 })
 export class StartBarComponent implements OnInit {
 
-  trip:TripStartbar[] = []
-
   constructor(
     private activeRouter: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
-    private startBarRute: StartBarRuteService) { }
+    public startBarRute: StartBarRuteService) { }
 
   ngOnInit(): void {
-    this.http.get('/assets/startBar.json').subscribe((data:any) => this.trip = data as TripStartbar [])
+    this.startBarRute.getStartBarInfo()
   }
 
   onStartBarRute(nameTo: any){

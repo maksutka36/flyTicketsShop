@@ -6,6 +6,7 @@ import {AccountComponent} from './account/account.component'
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { ErrorAlertComponent } from './error-alert/error-alert.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'account/:username', component: AccountComponent},
   {path: 'payment', component: PaymentComponent},
   {path: 'success', component: SuccessAlertComponent},
+  {path: 'error', component: ErrorAlertComponent},
 ];
 
 @NgModule({

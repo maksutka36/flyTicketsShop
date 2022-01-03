@@ -1,5 +1,5 @@
 <div class="startBarSpace">
-    <div *ngFor="let item of trip">
+    <div *ngFor="let item of this.startBarRute.startBarTrip">
         <div class="container" (click)="onStartBarRute(item.to)">
             <a  class="gradient" >
                 <img src="{{item.img}}" alt="img" class="img" >
