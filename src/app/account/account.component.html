@@ -11,7 +11,9 @@
     <div  *ngFor="let item of authService.history">
         <div class="historyTickets">
             <div [ngClass]="item.type == 'start bar' ? 'startBar' : 'noStartBar'">
-                <p>{{item._id}} {{item.type}}</p>
+                <ul>
+                    <p>{{item.type}}</p>
+                </ul>
             </div>
         </div>
     </div>

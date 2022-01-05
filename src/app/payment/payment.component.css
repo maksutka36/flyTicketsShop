@@ -19,6 +19,7 @@
     height: 80%;
     width: 80%;
     text-align: center;
+    cursor: pointer;
 }
 
 .text{
@@ -57,10 +58,12 @@
     font-family: IBM Plex Sans;
     border: none;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .buyBtn:disabled{
     background-color: #c2c2c2;
+    cursor: not-allowed;
 }
 
 .buyBtn:hover{

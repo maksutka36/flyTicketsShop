@@ -27,7 +27,7 @@
     background-color: rgba(0, 0, 0, 0.08);
     margin-left: 5%;
     width: 90%;
-    height: 90vh;
+    height: auto;
 }
 
 .historyWord{  
@@ -50,6 +50,7 @@
     font-size: 1.2em;
     font-family: Fira Sans;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .exitBtn:hover{
@@ -59,11 +60,16 @@
 
 .historyTickets{
     margin-top: 10px;
-    height: 50px;
-    width: 100%;
-    border: solid black 1px;
+    margin-left: 5%;
+    height: 75px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-family: Fira Sans;
+    color: rgb(85, 85, 85);
 }
 
 .noStartBar{
-    background-color: blueviolet;
+    color: green;
 }

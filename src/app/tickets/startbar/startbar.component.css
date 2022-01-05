@@ -13,6 +13,8 @@
     background-color: white;
     box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.212);
     border-radius: 5px;
+    cursor: pointer;
+    
 }
 
 .img{
